@@ -13,7 +13,7 @@ Make sure you have all of the above installed on your local computer (Version 56
 # Executing the program
 First, pull this repository by executing the following your terminal:
 ```
-https://github.com/aeguess/carb_scraper
+git clone https://github.com/aeguess/carb_scraper
 ```
 
 To build the environment using Conda, execute the following in your terminal:
