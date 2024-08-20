@@ -27,7 +27,7 @@ conda activate carb_env
 
 This will build and activate the environment needed to use the correct versions of the Python packages. To then execute the script, execute the following in your terminal:
 ```
-cd Downloads
+cd carb_scraper
 ```
 followed by:
 ```
