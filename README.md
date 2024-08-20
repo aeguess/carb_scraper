@@ -13,11 +13,11 @@ Make sure you have all of the above installed on your local computer (Version 56
 # Executing the program
 To build the environment using Conda, execute the following in your terminal:
 ```
-conda env create -n webvitals2 -f environment.yml
+conda env create -n carb_env -f environment.yml
 ```
 followed by:
 ```
-conda activate webvitals2
+conda activate carb_env
 ```
 
 This will build and activate the environment needed to use the correct versions of the Python packages. To then execute the script, execute the following in your terminal:
