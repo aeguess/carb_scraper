@@ -6,7 +6,9 @@ This data will be used to compare lifelong exposure to the above pollutants and 
 # Software Prerequisites
 This script executes on an outdated version of Firefox ([Version 56](https://www.mozilla.org/en-US/firefox/56.0/releasenotes/)) which should be downloaded prior to running the [Python](https://www.python.org/downloads/) script. To assist in managing Python packages, install either mini or anaconda through either the terminal or app. Miniconda (a lighter version of Anaconda) can be found ([here](https://docs.anaconda.com/miniconda/)).
 
-Make sure you have all of the above installed on your local computer (Version 56 of Firefox, Python, and Miniconda) before building the environment and executing the script.
+If you don't already have Git installed, git can be found [here](https://www.git-scm.com/download/win).
+
+Make sure you have all of the above installed on your local computer (Version 56 of Firefox, Git, Python, and Miniconda) before building the environment and executing the script.
 
 -> For a more in-depth guide on installing the software and setting up the virtual environment, see [here](https://github.com/lmillergrp/webvitals). The link leads to a different script built by a previous member of the lab who was scraping data from the Webvitals servers. <-
 
