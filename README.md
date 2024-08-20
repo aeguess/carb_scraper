@@ -10,7 +10,7 @@ Make sure you have all of the above installed on your local computer (Version 56
 
 -> For a more in-depth guide on installing the software and setting up the virtual environment, see [here](https://github.com/lmillergrp/webvitals). This is a different script built by a previous member of the lab who was scraping data from the Webvitals servers.
 
-# Installing the virtual environment and executing the script
+# Executing the program
 To build the environment using Conda, execute the following in your terminal:
 ```
 conda env create -n webvitals2 -f environment.yml
