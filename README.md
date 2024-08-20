@@ -8,7 +8,7 @@ This script executes on an outdated version of Firefox ([Version 56](https://www
 
 Make sure you have all of the above installed on your local computer (Version 56 of Firefox, Python, and Miniconda) before building the environment and executing the script.
 
--> For a more in-depth guide on installing the software and setting up the virtual environment, see [here](https://github.com/lmillergrp/webvitals).
+-> For a more in-depth guide on installing the software and setting up the virtual environment, see [here](https://github.com/lmillergrp/webvitals). This is a different script built by a previous member of the lab who was scraping data from the Webvitals servers.
 
 # Installing the virtual environment and executing the script
 To build the environment using Conda, execute the following in your terminal:
