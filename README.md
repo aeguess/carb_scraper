@@ -33,7 +33,7 @@ cd carb_scraper
 ```
 followed by:
 ```
-python carb_scraper.py
+python carb_pollutant_scraper.py
 ```
 
 This will change the terminal's working directory to your Downloads folder, and then execute carb_scraper. The Python script will then begin executing, and will take a few hours to complete; Firefox will open and begin automatically navigating the pages. The output will be added to your Downloads folder.
