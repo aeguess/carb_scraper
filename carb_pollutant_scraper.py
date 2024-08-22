@@ -4,6 +4,7 @@ import os
 from carb_scripts import carb_scraper
 from carb_scripts import driver_startup
 from carb_scripts import merge_files
+from carb_scripts import data_cleanup
 
 
 def main():
@@ -51,9 +52,9 @@ def main():
     
     
     
-    [driver, download_dir] = driver_startup()
-    carb_scraper(driver, websites, date_list, pollutants, download_dir)
-    merge_files(pollutants)
+    #[driver, download_dir] = driver_startup.driver_startup()
+    #carb_scraper.carb_scraper(driver, websites, date_list, pollutants, download_dir)
+    merge_files.merge_files(pollutants)
 
 
 main()

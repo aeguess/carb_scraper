@@ -16,5 +16,11 @@ def read_data_until_pattern(file_path, pattern):
         return None
         
     else:
+        try:
+            data = pd.read_csv(pd.compat.StringIO(''.join(data_lines)))
+        
+        except pd.errors.EmptyDataError:
+            return None
+        
         data = pd.read_csv(pd.compat.StringIO(''.join(data_lines)))
         return data

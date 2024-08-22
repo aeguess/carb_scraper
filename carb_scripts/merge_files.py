@@ -2,6 +2,8 @@ import pandas as pd
 import os
 
 from carb_scripts import read_data_until_pattern
+from carb_scripts import daily_cum
+from carb_scripts import data_cleanup
 
 
 def merge_files(pollutants):
@@ -19,12 +21,12 @@ def merge_files(pollutants):
                      for root, _, files in os.walk(pollutant_dir)
                      for file in files if file.endswith('.csv')]
 
-        master_df = read_data_until_pattern(all_files[0], fluff)
+        master_df = read_data_until_pattern.read_data_until_pattern(all_files[0], fluff)
         
         
         for filename in all_files[1:]:
             
-            df = read_data_until_pattern(filename, fluff)
+            df = read_data_until_pattern.read_data_until_pattern(filename, fluff)
             
             if df is not None: # if df is a blank file, don't combine
                 master_df = master_df.set_index('date').combine_first(df.set_index('date')).reset_index()
@@ -39,4 +41,9 @@ def merge_files(pollutants):
         master_file_path = os.path.join(pollutant_dir, (str(pollutant) + '_merged.csv'))
         master_df.to_csv(master_file_path, index=False)
         print(f"Merged file for {pollutant} saved at {master_file_path}")
+        
+        daily_cum.daily_cum(master_df, pollutant, pollutant_dir)
+        
+            
+        data_cleanup.data_cleanup(master_df, pollutant, pollutant_dir)
 
