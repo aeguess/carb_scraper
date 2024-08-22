@@ -70,4 +70,27 @@ def data_cleanup(pollutant_df, pollutant_name, pollutant_dir):
     combined_df.to_csv(combined_file_path, index=False)
     
     print(f"Combined daily cumulative exposure file saved at {combined_file_path}\n")
+    
+    
+    # Camp Fire versus 2019 control
+    
+    mask_hourly = ((pollutant_df['date'] >= '2018-11-8') & (pollutant_df['date'] <= '2018-11-25')) | \
+       ((pollutant_df['date'] >= '2019-11-8') & (pollutant_df['date'] <= '2019-11-25'))
+
+    mask_daily_cum = ((daily_cum_exp['date'] >= '2018-11-8') & (daily_cum_exp['date'] <= '2018-11-25')) | \
+       ((daily_cum_exp['date'] >= '2019-11-8') & (daily_cum_exp['date'] <= '2019-11-25'))
+
+    campfire_vs_2019_dailycum = daily_cum_exp.loc[mask_daily_cum]
+    
+    combined_file_path = os.path.join(pollutant_dir, f'{pollutant_name}_campfire_vs_2019_dailycum.csv')
+    campfire_vs_2019_dailycum.to_csv(combined_file_path, index=False)
+    
+    campfire_vs_2019_hourlydata = pollutant_df.loc[mask_hourly]
+    combined_file_path = os.path.join(pollutant_dir, f'{pollutant_name}_campfire_vs_2019_hourlydata.csv')
+    campfire_vs_2019_hourlydata.to_csv(combined_file_path, index=False)    
+        
+    
+    
+    
+    
         
